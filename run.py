@@ -1,9 +1,11 @@
-# run.py
-from app import create_app
+from app import create_app, db
+from flask_migrate import Migrate
 
-# Create an app instance using the factory function
 app = create_app()
+
+# Initialize Migrate
+migrate = Migrate(app, db)
 
 # Run the app
 if __name__ == "__main__":
-    app.run(debug=True)  # You can set debug=False in production
+    app.run(debug=True)

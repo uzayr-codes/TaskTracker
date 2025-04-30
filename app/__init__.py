@@ -11,9 +11,15 @@ def create_app():
 
     db.init_app(app)
     login_manager.init_app(app)
+    login_manager.login_view = 'auth.login'  # Important for redirecting unauthorized users
 
-    from .views import bp
-    app.register_blueprint(bp)
+    # Register main (task/dashboard) blueprint
+    from .views import bp as views_bp
+    app.register_blueprint(views_bp)
+
+    # ✅ Register auth blueprint
+    from .auth import auth as auth_bp
+    app.register_blueprint(auth_bp)
 
     from .models import User
 
