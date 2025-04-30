@@ -1,10 +1,8 @@
-# app/views.py
 from flask import Blueprint, render_template, redirect, url_for, flash, request
 from flask_login import login_user, current_user, logout_user, login_required
-from app import db
-from app.models import User, Task
-from app.forms import RegistrationForm, LoginForm, TaskForm
 from werkzeug.security import generate_password_hash, check_password_hash
+from .models import User, Task, db
+from .forms import RegistrationForm, LoginForm, TaskForm
 
 bp = Blueprint('main', __name__)
 

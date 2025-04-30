@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskTracker</title>
+    <!-- Link to Tailwind CSS -->
+    <link href="tailwind.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 text-white p-4 flex justify-between">
+        <a href="dashboard.html" class="font-bold">TaskTracker</a>
+        <div>
+            <!-- Simulate user login status (replace with dynamic content in a real app) -->
+            <span class="mr-4">Hi, John Doe</span>
+            <a href="logout.html" class="hover:underline">Logout</a>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="p-6">
+        <!-- Flash Messages (Replace with dynamic messages in a real app) -->
+        <div class="mb-2 p-3 rounded bg-green-200">
+            Success message goes here!
+        </div>
+        
+        <!-- Content Block (To be overridden in child templates) -->
+        <div class="content">
+            <!-- Your content will go here -->
+        </div>
+    </div>
+</body>
+</html>
